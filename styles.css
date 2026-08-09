@@ -501,3 +501,65 @@ h1,h2,h3{font-family:Sora,Arial,sans-serif;margin-top:0}.eyebrow{font-size:11px;
 .inventory-footnote p{margin:0;max-width:950px;font-size:8.5px;color:#85898c;line-height:1.65}.inventory-footnote a{font-size:10px;font-weight:700;color:#c86d28;white-space:nowrap}
 @media(max-width:900px){.inventory-heading{align-items:flex-start;flex-direction:column}.inventory-summary{grid-template-columns:1fr 1fr}.inventory-filters{grid-template-columns:1fr 1fr}.plot-search{grid-column:1/-1}.inventory-footnote{align-items:flex-start;flex-direction:column}}
 @media(max-width:650px){.plot-inventory-section{padding:72px 0}.inventory-heading h2{font-size:40px}.inventory-summary{grid-template-columns:1fr 1fr;gap:8px}.inventory-summary>div{padding:16px}.inventory-summary strong{font-size:25px}.inventory-filters{grid-template-columns:1fr;padding:18px}.plot-search{grid-column:auto}.status-filter-row{align-items:flex-start;flex-direction:column;padding:16px 18px}.visible-count{margin-left:0}.inventory-table th,.inventory-table td{padding:13px 14px}.inventory-footnote{padding:16px 18px}}
+
+
+/* ===== V6.6 PREMIUM TRANSPARENT LOGO INTRO ===== */
+.brand-intro{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(254,90,2,.12),transparent 28%),
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.045),transparent 42%),
+    #0f1318;
+}
+.intro-card{position:relative;width:min(700px,90vw)}
+.intro-logo-shell{
+  position:relative;
+  width:min(560px,82vw);
+  margin:auto;
+  opacity:0;
+  transform:translateY(18px) scale(.94);
+  animation:introLogoPremium 1.05s cubic-bezier(.2,.8,.2,1) .08s forwards;
+}
+.intro-logo-shell img{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:none;
+  height:auto;
+  filter:drop-shadow(0 22px 38px rgba(0,0,0,.34));
+}
+.intro-glow{
+  position:absolute;
+  z-index:1;
+  inset:14% 20%;
+  border-radius:50%;
+  background:rgba(254,90,2,.20);
+  filter:blur(48px);
+  transform:scale(.75);
+  opacity:0;
+  animation:introGlow 1.5s ease .35s forwards;
+}
+.intro-progress{
+  width:min(300px,58vw);
+  height:1px;
+  background:rgba(255,255,255,.12);
+  margin:20px auto 13px;
+}
+.intro-progress span{
+  background:linear-gradient(90deg,transparent,#fe5a02,#ffb27d,transparent);
+  box-shadow:0 0 14px rgba(254,90,2,.45);
+}
+.brand-intro p{color:rgba(255,255,255,.54)}
+@keyframes introLogoPremium{
+  0%{opacity:0;transform:translateY(18px) scale(.94);filter:blur(7px)}
+  65%{opacity:1;filter:blur(0)}
+  100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+@keyframes introGlow{
+  0%{opacity:0;transform:scale(.72)}
+  60%{opacity:.95}
+  100%{opacity:.48;transform:scale(1)}
+}
+@media(max-width:650px){
+  .intro-logo-shell{width:min(390px,88vw)}
+  .intro-progress{margin-top:14px}
+}

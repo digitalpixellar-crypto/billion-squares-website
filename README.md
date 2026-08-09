@@ -47,3 +47,9 @@ Reserved: 11 (source status = Mortagage/Mortgage)
 Sold: 0
 A Phase filter was added because plot numbers repeat between Phase 1 and Phase 2.
 Phase 2 plots 9, 10 and 26 have no SQYD extent entered in the supplied workbook and display as “To be confirmed”.
+
+## V6.6 Transparent Logo Opening Animation
+- Added assets/brand/billion-squares-logo-transparent.png
+- Opening splash now uses the finalized logo without its white image background.
+- Added premium dark intro background, subtle orange glow, fade/scale entrance and refined loading line.
+- Main website content and existing V6.5 Sri Nilayam inventory features are preserved.
