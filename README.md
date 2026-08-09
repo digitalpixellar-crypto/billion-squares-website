@@ -16,3 +16,10 @@ Static deployment: GitHub -> Vercel, Framework preset Other, no build command.
 - Refined desktop featured-project card proportions.
 - Added premium hover/micro-interactions.
 - Improved mobile section spacing and card hierarchy.
+
+## V6.2 Investment Calculator
+- Added Hyderabad Land Investment & Value Growth Calculator to homepage.
+- Added corridor selector, investment budget slider and 3/5-year holding period.
+- Real-time compound-growth calculations.
+- WhatsApp CTA sends the selected scenario to Billion Squares.
+- Includes explicit illustrative-estimate disclaimer.

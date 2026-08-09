@@ -73,6 +73,93 @@
 </div>
 </section>
 
+
+<section class="bs-investment-calculator" id="investment-calculator">
+  <div class="container calc-shell-inner">
+    <div class="calc-heading reveal">
+      <div class="eyebrow dark">BILLION SQUARES · INVESTMENT INTELLIGENCE</div>
+      <h2>Hyderabad Land Investment <span>& Value Growth Calculator</span></h2>
+      <p>Explore how a land investment could potentially grow across selected Hyderabad corridors using illustrative annual appreciation assumptions.</p>
+    </div>
+
+    <div class="calculator-grid reveal">
+      <div class="calculator-controls">
+        <div class="control-header">
+          <span>01</span>
+          <div><small>Investment Inputs</small><h3>Build your scenario.</h3></div>
+        </div>
+
+        <div class="field-group">
+          <label for="corridor">Target Corridor</label>
+          <div class="select-wrap">
+            <select id="corridor">
+              <option value="22">Chandanvelly SEZ Corridor — Est. 22% p.a.</option>
+              <option value="18">Patancheru / Mumbai Highway — Est. 18% p.a.</option>
+              <option value="16">Sadashivpet NH-65 Belt — Est. 16% p.a.</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </div>
+          <p class="field-hint" id="corridorHint">Illustrative annual appreciation assumption: 22%</p>
+        </div>
+
+        <div class="field-group budget-group">
+          <div class="field-row">
+            <label for="investmentBudget">Investment Budget</label>
+            <strong id="budgetDisplay">₹25 Lakhs</strong>
+          </div>
+          <input type="range" id="investmentBudget" min="10" max="100" step="5" value="25" aria-label="Investment budget in lakhs">
+          <div class="range-labels"><span>₹10L</span><span>₹1Cr</span></div>
+        </div>
+
+        <div class="field-group">
+          <label>Holding Period</label>
+          <div class="period-pills" role="radiogroup" aria-label="Holding period">
+            <button class="period-pill" data-years="3" type="button" role="radio" aria-checked="false"><span>3</span><small>Years</small></button>
+            <button class="period-pill active" data-years="5" type="button" role="radio" aria-checked="true"><span>5</span><small>Years</small></button>
+          </div>
+        </div>
+
+        <div class="assumption-note">
+          <div class="note-icon">i</div>
+          <p>Projections are based on illustrative compound-appreciation assumptions only. Actual property values may vary and no return is guaranteed.</p>
+        </div>
+      </div>
+
+      <div class="calculator-results" aria-live="polite">
+        <div class="result-top">
+          <div><span class="result-kicker">PROJECTED VALUE</span><h3>Estimated Future Value</h3></div>
+          <span class="projection-badge" id="yearsBadge">5 YEAR OUTLOOK</span>
+        </div>
+
+        <div class="future-value-block">
+          <span class="currency">₹</span><strong id="futureValue">67.57</strong><span class="unit">Lakhs</span>
+        </div>
+
+        <div class="growth-visual">
+          <div class="growth-track"><div class="growth-fill" id="growthFill"></div></div>
+          <div class="growth-labels">
+            <span>Today<b id="todayValue">₹25L</b></span>
+            <span>Projected<b id="projectedValueSmall">₹67.57L</b></span>
+          </div>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-card"><span>Total Growth</span><strong id="growthPercentage">+170.3%</strong><small>Over selected period</small></div>
+          <div class="metric-card"><span>Monthly Appreciation</span><strong id="monthlyGrowth">₹70,951</strong><small>Estimated average / month</small></div>
+          <div class="metric-card"><span>Annual Assumption</span><strong id="annualRate">22%</strong><small>Compound appreciation</small></div>
+          <div class="metric-card"><span>Holding Period</span><strong id="holdingPeriod">5 Years</strong><small>Investment horizon</small></div>
+        </div>
+
+        <a href="#" class="investment-cta" id="investmentReportBtn" target="_blank" rel="noopener">
+          <span>Request Detailed Investment Report</span><b>↗</b>
+        </a>
+
+        <p class="result-disclaimer">*Illustrative estimate only. This calculator is not investment, legal or financial advice and does not guarantee future appreciation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="experience">
 <div class="container experience-grid">
 <div class="experience-visual reveal"><img src="/assets/arrjava/2.jpeg" alt="Real estate site"><div class="visual-chip">BILLION SQUARES · HYDERABAD</div></div>
