@@ -25,3 +25,12 @@ V2 includes:
 - sitemap.xml and robots.txt
 - privacy policy
 - mobile UI refinements
+
+## Final Premium UI
+- Enlarged approved header logo
+- Rebalanced desktop hero
+- Refined typography and spacing
+- Premium property-image presentation
+- Cleaner floating Call/WhatsApp actions
+- Improved mobile hero and header
+- Hover polish for cards and conversion elements

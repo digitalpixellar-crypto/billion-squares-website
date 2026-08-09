@@ -44,3 +44,59 @@
  .section-head{align-items:flex-start;gap:16px;flex-direction:column}
  .map-card{align-items:flex-start;flex-direction:column}
 }
+
+/* FINAL PREMIUM UI POLISH */
+.header{background:rgba(255,255,255,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.nav-wrap{height:92px}
+.brand-logo-only{display:flex;align-items:center;min-width:230px}
+.brand-logo-only img{width:225px;height:76px;object-fit:contain;object-position:left center}
+.nav{gap:34px}
+.nav a{font-size:14px;letter-spacing:.01em}
+.nav-cta{padding:15px 22px!important;box-shadow:0 8px 20px rgba(41,49,59,.12)}
+.hero{padding:70px 0 76px}
+.hero-grid{grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(62px,5.7vw,96px);line-height:.94;letter-spacing:-.045em;max-width:720px}
+.hero .eyebrow{margin-bottom:28px}
+.hero-copy>p{font-size:19px;line-height:1.7;max-width:720px;margin-top:34px}
+.hero-actions{margin-top:30px}
+.visual{border-radius:36px;overflow:hidden;box-shadow:0 30px 80px rgba(41,49,59,.14)}
+.visual>img{height:610px;object-fit:cover}
+.float-card{border-radius:20px;box-shadow:0 18px 50px rgba(41,49,59,.15)}
+.floating-actions{gap:12px}
+.floating-actions a{width:56px;height:56px;border:2px solid rgba(255,255,255,.85);font-family:Arial,sans-serif}
+.float-call{font-size:0}
+.float-call:after{content:"☎";font-size:23px;line-height:1}
+.float-wa{font-size:0}
+.float-wa:after{content:"WhatsApp";font-size:9px;font-weight:900;letter-spacing:-.03em}
+.contact-ribbon-grid{min-height:82px}
+.section{padding-top:92px;padding-bottom:92px}
+.project-card,.service-card,.contact-box{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.project-card:hover,.service-card:hover,.contact-box:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(41,49,59,.10);border-color:rgba(254,90,2,.28)}
+.footer{padding-top:70px}
+@media(max-width:1100px){
+ .nav{gap:22px}
+ .brand-logo-only{min-width:190px}.brand-logo-only img{width:190px}
+ .hero-grid{gap:42px}.hero h1{font-size:clamp(58px,6vw,78px)}
+ .visual>img{height:540px}
+}
+@media(max-width:900px){
+ .nav-wrap{height:82px}.brand-logo-only{min-width:0}.brand-logo-only img{width:180px;height:66px}
+ .nav{top:82px}
+ .hero{padding:48px 0 58px}.hero-grid{grid-template-columns:1fr;gap:42px}
+ .hero h1{font-size:clamp(56px,10vw,78px);max-width:760px}
+ .hero-copy>p{max-width:760px}
+ .visual>img{height:520px}
+}
+@media(max-width:620px){
+ .nav-wrap{height:74px}.nav{top:74px}
+ .brand-logo-only img{width:155px;height:58px}
+ .hero{padding:38px 0 46px}
+ .hero h1{font-size:47px;line-height:.97;letter-spacing:-.035em}
+ .hero .eyebrow{font-size:11px;line-height:1.5;margin-bottom:20px}
+ .hero-copy>p{font-size:16px;line-height:1.65;margin-top:24px}
+ .hero-actions{display:grid;grid-template-columns:1fr;gap:10px}
+ .hero-actions .btn{text-align:center;width:100%}
+ .visual{border-radius:24px}.visual>img{height:390px}
+ .section{padding-top:66px;padding-bottom:66px}
+ .floating-actions a{width:50px;height:50px}
+}
