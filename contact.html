@@ -27,15 +27,82 @@
 <nav class="desktop-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html" class="active">Contact</a></nav>
 <div class="nav-actions">
 <a class="mini-link" href="tel:+918125125055">Call</a>
-<a class="nav-cta" href="/contact.html#enquiry">Book Site Visit <span>↗</span></a>
+<a class="nav-cta" href="#" data-open-booking>Book Site Visit <span>↗</span></a>
 <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </div>
 </div>
-<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html" class="active">Contact</a><a class="nav-cta" href="/contact.html#enquiry">Book Site Visit ↗</a></div>
+<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html" class="active">Contact</a><a class="nav-cta" href="#" data-open-booking>Book Site Visit ↗</a></div>
 </header><main>
 <section class="contact-modern"><div class="container contact-layout"><div class="reveal"><div class="eyebrow">CONTACT BILLION SQUARES</div><h1>Let’s find the right <span>property opportunity.</span></h1><p>Share your location, budget and property preference. Our team will help you with project information and site-visit coordination.</p><div class="contact-list"><a href="tel:+918125125055"><span>Phone / WhatsApp</span><b>+91 81251 25055</b></a><a href="mailto:billionsquares@gmail.com"><span>Email</span><b>billionsquares@gmail.com</b></a><div><span>Office</span><b>Plot No: 109, Street No-3, Kakatiya Hills, Madhapur, Hyderabad-500081</b></div></div></div>
 <form id="leadForm" class="modern-form reveal"><div><label>Name</label><input name="name" required placeholder="Your name"></div><div><label>Phone</label><input name="phone" required placeholder="+91"></div><div><label>Email</label><input name="email" type="email" placeholder="you@email.com"></div><div><label>Interested in</label><select name="project"><option>Aarusha Farms</option><option>Arrjava Farms</option><option>Sri Nilayam</option><option>Other requirement</option></select></div><div class="full"><label>Message</label><textarea name="message" rows="5" placeholder="Budget, preferred location, property type..."></textarea></div><button class="btn primary full" type="submit"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.55c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.64 1.11 2.82.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"/><path fill="currentColor" d="M26.62 5.38A14.9 14.9 0 0 0 16.03 1C7.78 1 1.07 7.71 1.07 15.96c0 2.64.69 5.22 2 7.5L.94 31l7.72-2.02a14.92 14.92 0 0 0 7.36 1.87h.01c8.25 0 14.96-6.71 14.96-14.96 0-4-1.56-7.76-4.37-10.51zm-10.59 22.94h-.01a12.4 12.4 0 0 1-6.33-1.73l-.45-.27-4.58 1.2 1.22-4.46-.29-.46a12.4 12.4 0 0 1-1.9-6.64c0-6.86 5.58-12.44 12.45-12.44 3.32 0 6.44 1.29 8.79 3.64a12.35 12.35 0 0 1 3.65 8.8c0 6.86-5.58 12.44-12.45 12.44z"/></svg><span>Send enquiry on WhatsApp</span></button></form></div></section>
-</main><footer class="footer">
+</main>
+<div class="booking-modal" id="siteVisitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+  <div class="booking-backdrop" data-close-booking></div>
+  <div class="booking-dialog">
+    <button class="booking-close" type="button" data-close-booking aria-label="Close site visit booking">×</button>
+
+    <div class="booking-head">
+      <span>1:1 SITE VISIT BOOKING</span>
+      <h2 id="bookingModalTitle">Plan your property visit.</h2>
+      <p>Three quick steps. Your booking details will be sent directly to Billion Squares on WhatsApp.</p>
+    </div>
+
+    <div class="booking-progress">
+      <span class="active" data-step-indicator="1">1</span><i></i>
+      <span data-step-indicator="2">2</span><i></i>
+      <span data-step-indicator="3">3</span>
+    </div>
+
+    <form id="siteVisitForm">
+      <div class="booking-step active" data-booking-step="1">
+        <div class="booking-step-label">STEP 1 · SELECT CORRIDOR</div>
+        <div class="booking-options booking-options-3">
+          <button type="button" class="booking-option active" data-booking-corridor="Chandanvelly">Chandanvelly<small>SEZ Corridor</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Patancheru">Patancheru<small>Mumbai Highway</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Sadashivpet">Sadashivpet<small>NH-65 Belt</small></button>
+        </div>
+        <input type="hidden" id="bookingCorridor" value="Chandanvelly">
+      </div>
+
+      <div class="booking-step" data-booking-step="2">
+        <div class="booking-step-label">STEP 2 · PLAN THE VISIT</div>
+        <label class="booking-field">
+          <span>Preferred Date</span>
+          <input type="date" id="bookingDate" required>
+        </label>
+        <div class="booking-field">
+          <span>Preferred Transport</span>
+          <div class="booking-options">
+            <button type="button" class="booking-option active" data-booking-transport="Self-Drive">Self-Drive<small>I’ll reach the site directly</small></button>
+            <button type="button" class="booking-option" data-booking-transport="Free Pickup Provided">Free Pickup<small>Request pickup assistance</small></button>
+          </div>
+          <input type="hidden" id="bookingTransport" value="Self-Drive">
+        </div>
+      </div>
+
+      <div class="booking-step" data-booking-step="3">
+        <div class="booking-step-label">STEP 3 · YOUR DETAILS</div>
+        <label class="booking-field">
+          <span>Name</span>
+          <input type="text" id="bookingName" required placeholder="Your full name" autocomplete="name">
+        </label>
+        <label class="booking-field">
+          <span>WhatsApp Number</span>
+          <input type="tel" id="bookingPhone" required placeholder="+91" autocomplete="tel" inputmode="tel">
+        </label>
+        <div class="booking-summary" id="bookingSummary"></div>
+      </div>
+
+      <div class="booking-actions">
+        <button class="booking-back" id="bookingBack" type="button">Back</button>
+        <button class="booking-next" id="bookingNext" type="button">Continue ↗</button>
+        <button class="booking-submit" id="bookingSubmit" type="submit">Confirm on WhatsApp ↗</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
 <div class="container footer-grid">
 <div class="footer-brand"><img src="/assets/brand/billion-squares-logo-final.png" alt="Billion Squares"><p>Curated opportunities. Better conversations. Stronger property decisions.</p></div>
 <div><span class="footer-kicker">Navigate</span><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>

@@ -23,3 +23,11 @@ Static deployment: GitHub -> Vercel, Framework preset Other, no build command.
 - Real-time compound-growth calculations.
 - WhatsApp CTA sends the selected scenario to Billion Squares.
 - Includes explicit illustrative-estimate disclaimer.
+
+## V6.3 Interactive Tools
+- Hyderabad Growth Corridor Distance & Connectivity Explorer with 4 corridor tabs.
+- Telangana Land Unit Converter with real-time Sq. Yards / Guntas / Acres / Sq. Ft conversion.
+- Instant 1:1 Site Visit Booking Modal with corridor, date, transport, name and WhatsApp steps.
+- All existing Book Site Visit CTAs now open the booking modal.
+- Booking submissions redirect directly to WhatsApp +91 81251 25055.
+- Connectivity travel values are labelled as indicative planning estimates.

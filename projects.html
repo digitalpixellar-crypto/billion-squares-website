@@ -27,11 +27,11 @@
 <nav class="desktop-nav"><a href="/">Home</a><a href="/projects.html" class="active">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
 <div class="nav-actions">
 <a class="mini-link" href="tel:+918125125055">Call</a>
-<a class="nav-cta" href="/contact.html#enquiry">Book Site Visit <span>↗</span></a>
+<a class="nav-cta" href="#" data-open-booking>Book Site Visit <span>↗</span></a>
 <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </div>
 </div>
-<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html" class="active">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a class="nav-cta" href="/contact.html#enquiry">Book Site Visit ↗</a></div>
+<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html" class="active">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a class="nav-cta" href="#" data-open-booking>Book Site Visit ↗</a></div>
 </header><main>
 <section class="page-hero"><div class="container"><div class="eyebrow">CURATED REAL ESTATE</div><h1>Projects worth<br><span>exploring.</span></h1><p>Selected opportunities presented with clearer context, stronger visuals and direct access to our advisory team.</p></div></section>
 <section class="projects-list"><div class="container">
@@ -39,7 +39,74 @@
 <a class="project-row reveal" href="/arrjava-farms.html"><div class="pr-num">02</div><div class="pr-image"><img src="/assets/arrjava/WhatsApp Image 2026-08-10 at 00.33.32.jpeg" alt="Arrjava Farms"></div><div class="pr-copy"><span>OPEN PLOTS · PATANCHERU</span><h2>Arrjava Farms</h2><p>Residential conversion open plots near Mumbai Highway and Patancheru.</p></div><div class="pr-arrow">↗</div></a>
 <a class="project-row reveal" href="/sri-nilayam.html"><div class="pr-num">03</div><div class="pr-image"><img src="/assets/aarusha/4.jpeg" alt="Sri Nilayam"></div><div class="pr-copy"><span>VILLA PLOTS · SADASHIVPET</span><h2>Sri Nilayam</h2><p>DTCP-approved villa plots with NH-65 connectivity and planned development.</p></div><div class="pr-arrow">↗</div></a>
 </div></section>
-</main><footer class="footer">
+</main>
+<div class="booking-modal" id="siteVisitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+  <div class="booking-backdrop" data-close-booking></div>
+  <div class="booking-dialog">
+    <button class="booking-close" type="button" data-close-booking aria-label="Close site visit booking">×</button>
+
+    <div class="booking-head">
+      <span>1:1 SITE VISIT BOOKING</span>
+      <h2 id="bookingModalTitle">Plan your property visit.</h2>
+      <p>Three quick steps. Your booking details will be sent directly to Billion Squares on WhatsApp.</p>
+    </div>
+
+    <div class="booking-progress">
+      <span class="active" data-step-indicator="1">1</span><i></i>
+      <span data-step-indicator="2">2</span><i></i>
+      <span data-step-indicator="3">3</span>
+    </div>
+
+    <form id="siteVisitForm">
+      <div class="booking-step active" data-booking-step="1">
+        <div class="booking-step-label">STEP 1 · SELECT CORRIDOR</div>
+        <div class="booking-options booking-options-3">
+          <button type="button" class="booking-option active" data-booking-corridor="Chandanvelly">Chandanvelly<small>SEZ Corridor</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Patancheru">Patancheru<small>Mumbai Highway</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Sadashivpet">Sadashivpet<small>NH-65 Belt</small></button>
+        </div>
+        <input type="hidden" id="bookingCorridor" value="Chandanvelly">
+      </div>
+
+      <div class="booking-step" data-booking-step="2">
+        <div class="booking-step-label">STEP 2 · PLAN THE VISIT</div>
+        <label class="booking-field">
+          <span>Preferred Date</span>
+          <input type="date" id="bookingDate" required>
+        </label>
+        <div class="booking-field">
+          <span>Preferred Transport</span>
+          <div class="booking-options">
+            <button type="button" class="booking-option active" data-booking-transport="Self-Drive">Self-Drive<small>I’ll reach the site directly</small></button>
+            <button type="button" class="booking-option" data-booking-transport="Free Pickup Provided">Free Pickup<small>Request pickup assistance</small></button>
+          </div>
+          <input type="hidden" id="bookingTransport" value="Self-Drive">
+        </div>
+      </div>
+
+      <div class="booking-step" data-booking-step="3">
+        <div class="booking-step-label">STEP 3 · YOUR DETAILS</div>
+        <label class="booking-field">
+          <span>Name</span>
+          <input type="text" id="bookingName" required placeholder="Your full name" autocomplete="name">
+        </label>
+        <label class="booking-field">
+          <span>WhatsApp Number</span>
+          <input type="tel" id="bookingPhone" required placeholder="+91" autocomplete="tel" inputmode="tel">
+        </label>
+        <div class="booking-summary" id="bookingSummary"></div>
+      </div>
+
+      <div class="booking-actions">
+        <button class="booking-back" id="bookingBack" type="button">Back</button>
+        <button class="booking-next" id="bookingNext" type="button">Continue ↗</button>
+        <button class="booking-submit" id="bookingSubmit" type="submit">Confirm on WhatsApp ↗</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
 <div class="container footer-grid">
 <div class="footer-brand"><img src="/assets/brand/billion-squares-logo-final.png" alt="Billion Squares"><p>Curated opportunities. Better conversations. Stronger property decisions.</p></div>
 <div><span class="footer-kicker">Navigate</span><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>

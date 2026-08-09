@@ -27,15 +27,82 @@
 <nav class="desktop-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html" class="active">About</a><a href="/contact.html">Contact</a></nav>
 <div class="nav-actions">
 <a class="mini-link" href="tel:+918125125055">Call</a>
-<a class="nav-cta" href="/contact.html#enquiry">Book Site Visit <span>↗</span></a>
+<a class="nav-cta" href="#" data-open-booking>Book Site Visit <span>↗</span></a>
 <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </div>
 </div>
-<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html" class="active">About</a><a href="/contact.html">Contact</a><a class="nav-cta" href="/contact.html#enquiry">Book Site Visit ↗</a></div>
+<div class="mobile-nav"><a href="/">Home</a><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html" class="active">About</a><a href="/contact.html">Contact</a><a class="nav-cta" href="#" data-open-booking>Book Site Visit ↗</a></div>
 </header><main>
 <section class="about-modern"><div class="container about-layout"><div class="reveal"><div class="eyebrow dark">ABOUT BILLION SQUARES</div><h1>Built to make property discovery feel <span>smarter.</span></h1><p>Billion Squares is a Hyderabad-focused real estate marketing and property advisory brand. Our role is to present selected opportunities with clarity and create a better journey from first enquiry to site visit.</p></div><div class="about-image reveal"><img src="/assets/arrjava/3.jpeg" alt="Billion Squares project"></div></div></section>
 <section class="values-section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow dark">OUR PRINCIPLES</div><h2>What shapes the Billion Squares experience.</h2></div></div><div class="value-grid"><div class="reveal"><span>01</span><h3>Clarity</h3><p>Information should help buyers decide, not confuse them.</p></div><div class="reveal"><span>02</span><h3>Selection</h3><p>We focus on relevant opportunities rather than endless listings.</p></div><div class="reveal"><span>03</span><h3>Presentation</h3><p>Premium projects deserve a premium digital experience.</p></div><div class="reveal"><span>04</span><h3>Support</h3><p>Direct, human communication from enquiry through site visit.</p></div></div></div></section>
-</main><footer class="footer">
+</main>
+<div class="booking-modal" id="siteVisitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+  <div class="booking-backdrop" data-close-booking></div>
+  <div class="booking-dialog">
+    <button class="booking-close" type="button" data-close-booking aria-label="Close site visit booking">×</button>
+
+    <div class="booking-head">
+      <span>1:1 SITE VISIT BOOKING</span>
+      <h2 id="bookingModalTitle">Plan your property visit.</h2>
+      <p>Three quick steps. Your booking details will be sent directly to Billion Squares on WhatsApp.</p>
+    </div>
+
+    <div class="booking-progress">
+      <span class="active" data-step-indicator="1">1</span><i></i>
+      <span data-step-indicator="2">2</span><i></i>
+      <span data-step-indicator="3">3</span>
+    </div>
+
+    <form id="siteVisitForm">
+      <div class="booking-step active" data-booking-step="1">
+        <div class="booking-step-label">STEP 1 · SELECT CORRIDOR</div>
+        <div class="booking-options booking-options-3">
+          <button type="button" class="booking-option active" data-booking-corridor="Chandanvelly">Chandanvelly<small>SEZ Corridor</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Patancheru">Patancheru<small>Mumbai Highway</small></button>
+          <button type="button" class="booking-option" data-booking-corridor="Sadashivpet">Sadashivpet<small>NH-65 Belt</small></button>
+        </div>
+        <input type="hidden" id="bookingCorridor" value="Chandanvelly">
+      </div>
+
+      <div class="booking-step" data-booking-step="2">
+        <div class="booking-step-label">STEP 2 · PLAN THE VISIT</div>
+        <label class="booking-field">
+          <span>Preferred Date</span>
+          <input type="date" id="bookingDate" required>
+        </label>
+        <div class="booking-field">
+          <span>Preferred Transport</span>
+          <div class="booking-options">
+            <button type="button" class="booking-option active" data-booking-transport="Self-Drive">Self-Drive<small>I’ll reach the site directly</small></button>
+            <button type="button" class="booking-option" data-booking-transport="Free Pickup Provided">Free Pickup<small>Request pickup assistance</small></button>
+          </div>
+          <input type="hidden" id="bookingTransport" value="Self-Drive">
+        </div>
+      </div>
+
+      <div class="booking-step" data-booking-step="3">
+        <div class="booking-step-label">STEP 3 · YOUR DETAILS</div>
+        <label class="booking-field">
+          <span>Name</span>
+          <input type="text" id="bookingName" required placeholder="Your full name" autocomplete="name">
+        </label>
+        <label class="booking-field">
+          <span>WhatsApp Number</span>
+          <input type="tel" id="bookingPhone" required placeholder="+91" autocomplete="tel" inputmode="tel">
+        </label>
+        <div class="booking-summary" id="bookingSummary"></div>
+      </div>
+
+      <div class="booking-actions">
+        <button class="booking-back" id="bookingBack" type="button">Back</button>
+        <button class="booking-next" id="bookingNext" type="button">Continue ↗</button>
+        <button class="booking-submit" id="bookingSubmit" type="submit">Confirm on WhatsApp ↗</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
 <div class="container footer-grid">
 <div class="footer-brand"><img src="/assets/brand/billion-squares-logo-final.png" alt="Billion Squares"><p>Curated opportunities. Better conversations. Stronger property decisions.</p></div>
 <div><span class="footer-kicker">Navigate</span><a href="/projects.html">Projects</a><a href="/services.html">Services</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></div>
