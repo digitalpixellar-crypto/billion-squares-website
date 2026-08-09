@@ -38,3 +38,12 @@ Static deployment: GitHub -> Vercel, Framework preset Other, no build command.
 - Plus toggle rotates into close state.
 - Opening one question automatically closes the previous one.
 - Mobile responsive.
+
+## V6.5 Sri Nilayam Master Plot Availability & Extent Search
+Data source: Sadashivpet Area statement.xlsx
+Total plot records: 89
+Available: 78 (source status = Release)
+Reserved: 11 (source status = Mortagage/Mortgage)
+Sold: 0
+A Phase filter was added because plot numbers repeat between Phase 1 and Phase 2.
+Phase 2 plots 9, 10 and 26 have no SQYD extent entered in the supplied workbook and display as “To be confirmed”.

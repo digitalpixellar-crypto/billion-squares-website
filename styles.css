@@ -454,3 +454,50 @@ h1,h2,h3{font-family:Sora,Arial,sans-serif;margin-top:0}.eyebrow{font-size:11px;
     font-size:13px;
   }
 }
+
+
+/* ===== V6.5 SRI NILAYAM PLOT AVAILABILITY & EXTENT SEARCH ===== */
+.plot-inventory-section{padding:110px 0;background:#f7f7f5}
+.inventory-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:42px}
+.inventory-heading>div{max-width:860px}
+.inventory-heading h2{font:600 clamp(44px,4.8vw,70px) Sora,Arial,sans-serif;line-height:1.06;letter-spacing:-.045em;margin:14px 0 16px}
+.inventory-heading h2 span{color:#fe5a02}
+.inventory-heading p{max-width:730px;color:#73787c;line-height:1.75;font-size:14px}
+.inventory-whatsapp-top{background:#0f1318;color:#fff;border-radius:999px;padding:14px 18px;font-size:11px;font-weight:700;white-space:nowrap}
+.inventory-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.inventory-summary>div{background:#fff;border:1px solid rgba(15,19,24,.1);border-radius:17px;padding:21px;position:relative;overflow:hidden}
+.inventory-summary>div:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#29313b}
+.inventory-summary .available:before{background:#278a5b}.inventory-summary .reserved:before{background:#c86d28}.inventory-summary .sold:before{background:#a84c4c}
+.inventory-summary span{display:block;font-size:9px;color:#767b7f;text-transform:uppercase;letter-spacing:.1em}
+.inventory-summary strong{display:block;font:600 30px Sora;margin:8px 0 5px}
+.inventory-summary small{color:#999da0;font-size:8px;line-height:1.45}
+.inventory-tool{background:#fff;border:1px solid rgba(15,19,24,.1);border-radius:22px;overflow:hidden;box-shadow:0 22px 65px rgba(15,19,24,.055)}
+.inventory-filters{display:grid;grid-template-columns:1.2fr .8fr .65fr;gap:14px;padding:24px;border-bottom:1px solid rgba(15,19,24,.1);background:#fcfbf8}
+.inventory-filters label>span{display:block;font-size:8px;font-weight:700;color:#777c80;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}
+.plot-search>div{display:flex;align-items:center;border:1px solid rgba(15,19,24,.13);background:#fff;border-radius:12px;padding:0 13px}
+.plot-search svg{width:17px;height:17px;color:#9a9da0;flex:0 0 auto}
+.plot-search input{width:100%;border:0;outline:0;background:transparent;padding:13px 10px;font:500 13px Inter;color:#0f1318}
+.inventory-filters select{width:100%;height:45px;border:1px solid rgba(15,19,24,.13);border-radius:12px;background:#fff;padding:0 12px;font:500 12px Inter;color:#0f1318;outline:none}
+.status-filter-row{display:flex;align-items:center;gap:14px;padding:18px 24px;border-bottom:1px solid rgba(15,19,24,.1)}
+.status-filter-row>span{font-size:8px;font-weight:700;color:#777c80;letter-spacing:.1em;text-transform:uppercase}
+.status-pills{display:flex;gap:8px;flex-wrap:wrap}
+.status-pill{border:1px solid rgba(15,19,24,.12);background:#fff;color:#565b5e;border-radius:999px;padding:9px 12px;font:600 10px Inter;cursor:pointer;transition:.2s}
+.status-pill b{font-size:9px;margin-left:5px;color:#9b9ea0}
+.status-pill:hover{border-color:rgba(254,90,2,.35)}
+.status-pill.active{background:#0f1318;border-color:#0f1318;color:#fff}.status-pill.active b{color:#c4c6c6}
+.visible-count{margin-left:auto;font-size:9px;color:#8b8f92;white-space:nowrap}.visible-count strong{color:#fe5a02;font-size:12px}
+.inventory-table-wrap{overflow-x:auto}
+.inventory-table{width:100%;border-collapse:collapse;min-width:850px}
+.inventory-table th{text-align:left;background:#0f1318;color:#aeb1b2;padding:14px 18px;font-size:8px;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.inventory-table td{padding:16px 18px;border-bottom:1px solid rgba(15,19,24,.085);font-size:12px;color:#474c4f;vertical-align:middle}
+.inventory-table tbody tr{transition:.18s}.inventory-table tbody tr:hover{background:#faf8f4}
+.plot-id{display:flex;align-items:center;gap:10px}.plot-id i{width:31px;height:31px;border-radius:9px;background:#f0eee8;display:grid;place-items:center;color:#fe5a02;font-style:normal;font-size:8px;font-weight:700}.plot-id b{font:600 13px Sora}
+.extent-main{display:block;font:600 13px Sora;color:#0f1318}.extent-sub{display:block;margin-top:3px;color:#9a9da0;font-size:8px}
+.facing-tag,.phase-tag{display:inline-flex;border:1px solid rgba(15,19,24,.1);border-radius:999px;padding:6px 9px;font-size:9px;background:#fafaf8}
+.status-badge{display:inline-flex;border-radius:999px;padding:7px 10px;font-size:9px;font-weight:700}.status-badge.available{background:#e7f5ed;color:#26744f}.status-badge.reserved{background:#fff0e3;color:#a65d25}.status-badge.sold{background:#f0e8e8;color:#945050}
+.plot-wa{display:inline-flex;align-items:center;justify-content:center;background:#25d366;color:#fff;border-radius:999px;padding:9px 12px;font-size:9px;font-weight:700;white-space:nowrap;transition:.2s}.plot-wa:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(37,211,102,.2)}
+.inventory-empty{display:none;text-align:center;padding:60px 20px}.inventory-empty.visible{display:block}.inventory-empty>div{font-size:36px;color:#c86d28}.inventory-empty h3{font-size:21px;margin:12px 0 7px}.inventory-empty p{font-size:12px;color:#8b8f92}
+.inventory-footnote{padding:18px 24px;background:#f6f4ef;border-top:1px solid rgba(15,19,24,.08);display:flex;justify-content:space-between;align-items:center;gap:24px}
+.inventory-footnote p{margin:0;max-width:950px;font-size:8.5px;color:#85898c;line-height:1.65}.inventory-footnote a{font-size:10px;font-weight:700;color:#c86d28;white-space:nowrap}
+@media(max-width:900px){.inventory-heading{align-items:flex-start;flex-direction:column}.inventory-summary{grid-template-columns:1fr 1fr}.inventory-filters{grid-template-columns:1fr 1fr}.plot-search{grid-column:1/-1}.inventory-footnote{align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){.plot-inventory-section{padding:72px 0}.inventory-heading h2{font-size:40px}.inventory-summary{grid-template-columns:1fr 1fr;gap:8px}.inventory-summary>div{padding:16px}.inventory-summary strong{font-size:25px}.inventory-filters{grid-template-columns:1fr;padding:18px}.plot-search{grid-column:auto}.status-filter-row{align-items:flex-start;flex-direction:column;padding:16px 18px}.visible-count{margin-left:0}.inventory-table th,.inventory-table td{padding:13px 14px}.inventory-footnote{padding:16px 18px}}
