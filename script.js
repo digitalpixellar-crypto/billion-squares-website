@@ -283,3 +283,28 @@ Please confirm the site visit schedule.`;
     closeModal();
   });
 })();
+
+
+/* ===== V6.4 FAQ ACCORDION ===== */
+(function(){
+  const items=[...document.querySelectorAll(".faq-item")];
+  if(!items.length) return;
+
+  items.forEach(item=>{
+    const button=item.querySelector(".faq-question");
+    button.addEventListener("click",()=>{
+      const isOpen=item.classList.contains("active");
+
+      items.forEach(other=>{
+        other.classList.remove("active");
+        const otherBtn=other.querySelector(".faq-question");
+        if(otherBtn) otherBtn.setAttribute("aria-expanded","false");
+      });
+
+      if(!isOpen){
+        item.classList.add("active");
+        button.setAttribute("aria-expanded","true");
+      }
+    });
+  });
+})();

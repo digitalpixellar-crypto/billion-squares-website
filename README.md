@@ -31,3 +31,10 @@ Static deployment: GitHub -> Vercel, Framework preset Other, no build command.
 - All existing Book Site Visit CTAs now open the booking modal.
 - Booking submissions redirect directly to WhatsApp +91 81251 25055.
 - Connectivity travel values are labelled as indicative planning estimates.
+
+## V6.4 FAQ / Common Questions
+- Added premium real-estate FAQ accordion to homepage.
+- Smooth expand/collapse animation.
+- Plus toggle rotates into close state.
+- Opening one question automatically closes the previous one.
+- Mobile responsive.
